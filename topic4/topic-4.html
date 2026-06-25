@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input-user</title>
+</head>
+
+<body>
+    <h2>Input Form</h2>
+    <p>
+        The <code>&lt;form&gt;</code> element is used to collect user information. It can contain different input fields
+        such as text boxes, radio buttons, checkboxes, file uploads, and buttons for submitting data.
+    </p>
+    <p>
+        The <code>&lt;input&gt;</code> element is used to collect different types of user input. The <code>type</code>
+        attribute determines what kind of data the user can enter, such as text, email, password, number, or date.
+    </p>
+    <div style="padding: 10px;">
+        <form action="" method="POST" target="_blank" autocomplete="off">
+
+
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" placeholder="Enter your full name" maxlength="20" required>
+            <br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" placeholder="example@email.com" required>
+            <br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" maxlength="20" required>
+            <br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" min="15" max="60">
+            <br><br>
+
+            <label for="birthdate">Date of Birth:</label><br>
+            <input type="date" id="birthdate" name="birthdate">
+            <br><br>
+            <p>
+                The <code>&lt;fieldset&gt;</code> element groups related form controls together, while
+                <code>&lt;legend&gt;</code> provides a title for the group.
+            </p>
+
+            <fieldset>
+
+                <legend>Gender</legend>
+
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+
+                <legend>Hobbies</legend>
+
+                <input type="checkbox" id="reading" name="hobby">
+                <label for="reading">Reading</label><br>
+
+                <input type="checkbox" id="sports" name="hobby">
+                <label for="sports">Sports</label><br>
+
+                <input type="checkbox" id="travel" name="hobby">
+                <label for="travel">Travel</label>
+
+            </fieldset>
+
+            <br>
+
+
+            <label for="photo">Profile Picture:</label><br>
+            <input type="file" id="photo" name="photo" multiple>
+            <br><br>
+
+            <p>
+                The <code>&lt;textarea&gt;</code> element is used to collect multi-line text, making it suitable for
+                comments, messages, or descriptions.
+            </p>
+            <label for="about">About Me:</label><br>
+            <textarea id="about" rows="4" cols="40" placeholder="Write something about yourself..."></textarea>
+
+            <br><br>
+
+            <p>
+                The <code>&lt;select&gt;</code> element creates a drop-down list, and the <code>&lt;option&gt;</code>
+                elements define the available choices.
+            </p>
+            <label for="country">Country:</label><br>
+
+            <select id="country">
+
+                <optgroup label="Middle East">
+
+                    <option>Jordan</option>
+                    <option>Saudi Arabia</option>
+                    <option>UAE</option>
+
+                </optgroup>
+
+                <optgroup label="Europe">
+
+                    <option>Germany</option>
+                    <option>France</option>
+                    <option>Italy</option>
+
+                </optgroup>
+
+            </select>
+
+            <br><br>
+            <p>
+                The <code>&lt;datalist&gt;</code> element provides a list of suggested values while still allowing users
+                to type their own input.
+            </p>
+
+            <label for="language">
+                Favorite Programming Language:
+            </label><br>
+
+            <input list="languages" id="language" placeholder="Choose or type">
+
+            <datalist id="languages">
+
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JavaScript">
+                <option value="Python">
+                <option value="C#">
+
+            </datalist>
+
+            <br><br>
+
+            <label for="username">Username (Read Only):</label><br>
+
+            <input type="text" id="username" value="Username" readonly>
+
+            <br><br>
+
+            <label for="status">Status:</label><br>
+
+            <input type="text" id="status" value="Disabled Account" disabled>
+
+            <br><br>
+
+
+            <p>
+                The buttons below allow users to submit the form or reset all fields to their default values.
+            </p>
+
+            <button type="submit">Submit</button>
+
+            <button type="reset">Reset</button>
+
+
+        </form>
+    </div>
+</body>
+
+</html>
